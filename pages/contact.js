@@ -2,7 +2,6 @@ import Head from "next/head";
 import styles from "../styles/index.module.css";
 
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import ContactForm from "../components/ContactForm";
 
 const contact = () => {

@@ -1,5 +1,4 @@
 import React from "react";
-import GameCard from "./GameCard";
 import styles from "./GameCarousel.module.css";
 import Carousel from "react-elastic-carousel";
 

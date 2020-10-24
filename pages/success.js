@@ -3,7 +3,6 @@ import styles from "../styles/index.module.css";
 import Link from "next/link";
 
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 const success = () => {
   return (

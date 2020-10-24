@@ -3,14 +3,8 @@ import Link from "next/link";
 
 import styles from "../components/Hero.module.css";
 
-import MainButton from "../components/MainButton";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faGithubSquare,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
   return (

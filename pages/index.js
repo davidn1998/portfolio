@@ -4,8 +4,6 @@ import Link from "next/link";
 
 import styles from "../styles/index.module.css";
 
-import Logo from "../components/Logo";
-import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import GameCarousel from "../components/GameCarousel";
