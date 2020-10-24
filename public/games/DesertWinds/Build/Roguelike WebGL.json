@@ -1,0 +1,15 @@
+{
+"companyName": "DefaultCompany",
+"productName": "RogueLike",
+"productVersion": "1.0",
+"dataUrl": "Roguelike WebGL.data.unityweb",
+"wasmCodeUrl": "Roguelike WebGL.wasm.code.unityweb",
+"wasmFrameworkUrl": "Roguelike WebGL.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.0f1"
+}
