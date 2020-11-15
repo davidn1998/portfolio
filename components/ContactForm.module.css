@@ -31,6 +31,7 @@
 .contactForm button:hover {
   color: #000;
   background-color: #fff;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 992px) {
