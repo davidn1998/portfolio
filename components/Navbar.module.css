@@ -60,4 +60,8 @@
     flex-direction: column;
     align-items: flex-end;
   }
+
+  .navbar li {
+    padding: 0;
+  }
 }
