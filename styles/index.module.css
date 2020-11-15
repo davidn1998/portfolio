@@ -38,7 +38,7 @@
   margin-bottom: 5rem;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 992px) {
   .infoCards {
     flex-direction: column;
     width: 100%;
@@ -50,5 +50,9 @@
     text-align: center;
     margin-left: 0;
     margin-bottom: 1rem;
+  }
+
+  .main {
+    margin: 0;
   }
 }
