@@ -83,7 +83,7 @@ const Home = () => {
       </section>
       <div className="mb-6 flex border-b-2 border-gray-500 pb-2 text-lg font-bold dark:border-gray-50">
         <motion.div
-          className="absolute z-[-1] h-[44px] rounded-md bg-gray-200 dark:bg-gray-700"
+          className="absolute z-[-1] h-[44px] rounded-xl bg-gray-200 dark:bg-gray-700"
           initial={{ opacity: 0, x: tabItems[tab].x }}
           animate={{
             opacity: 1,
@@ -99,7 +99,7 @@ const Home = () => {
         <div className="flex text-gray-700 dark:text-gray-400">
           <h3
             onClick={() => setTab("portfolio")}
-            className={`mr-8 cursor-pointer rounded-md p-2 transition-colors duration-300 hover:text-black dark:hover:text-white ${
+            className={`mr-8 cursor-pointer rounded-xl p-2 transition-colors duration-300 hover:text-black dark:hover:text-white ${
               tab === "portfolio" ? "text-black dark:text-white" : ""
             }`}
           >
@@ -107,7 +107,7 @@ const Home = () => {
           </h3>
           <h3
             onClick={() => setTab("skills")}
-            className={`cursor-pointer rounded-md p-2 transition-colors duration-300 hover:text-black dark:hover:text-white ${
+            className={`cursor-pointer rounded-xl p-2 transition-colors duration-300 hover:text-black dark:hover:text-white ${
               tab === "skills" ? "text-black dark:text-white" : ""
             }`}
           >

@@ -21,7 +21,7 @@ export const ProjectCard = ({
           alt="project"
           width={500}
           height={500}
-          className="mb-6 h-60 w-full rounded-md object-cover hover:animate-pulse"
+          className="mb-6 h-60 w-full rounded-xl object-cover shadow-lg hover:animate-pulse dark:shadow-neutral-600"
         />
       </a>
       <h3 className="mb-4 font-bold">{projectName}</h3>

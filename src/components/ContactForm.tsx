@@ -52,14 +52,15 @@ export const ContactForm = (props: Props) => {
       <form
         onSubmit={handleSubmit(onSubmit)}
         data-netlify="true"
-        className="flex flex-col text-black dark:text-white"
+        className="mt-32 flex flex-col rounded-2xl bg-gray-50 p-12 text-center text-black shadow-lg dark:bg-neutral-800 dark:text-white dark:shadow-neutral-800"
       >
+        <h1 className="mb-8 text-2xl font-bold">Contact Me</h1>
         <input
           placeholder="Name"
           {...register("name", {
             required: { value: true, message: "Name is required" },
           })}
-          className="rounded-md bg-neutral-300 p-2 dark:bg-neutral-700"
+          className="rounded-md bg-neutral-300 p-2 shadow-md dark:bg-neutral-700"
         />
         {errors.name && (
           <p className="mt-2 text-red-400">{errors?.name?.message}</p>
@@ -70,7 +71,7 @@ export const ContactForm = (props: Props) => {
           {...register("email", {
             required: { value: true, message: "Email is required" },
           })}
-          className="mt-6 rounded-md bg-neutral-300 p-2 dark:bg-neutral-700"
+          className="mt-6 rounded-md bg-neutral-300 p-2 shadow-md dark:bg-neutral-700"
         />
         {errors.email && (
           <p className="mt-2 text-red-400">{errors?.email?.message}</p>
@@ -81,7 +82,7 @@ export const ContactForm = (props: Props) => {
             required: { value: true, message: "Message is required" },
           })}
           rows={4}
-          className="mt-6 rounded-md bg-neutral-300 p-2 dark:bg-neutral-700"
+          className="mt-6 rounded-md bg-neutral-300 p-2 shadow-md dark:bg-neutral-700"
         />
         {errors.message && (
           <p className="mt-2 text-red-400">{errors?.message?.message}</p>
@@ -89,7 +90,7 @@ export const ContactForm = (props: Props) => {
 
         <button
           type="submit"
-          className="mt-8 w-[50%] self-center rounded-md bg-neutral-600 p-2 text-neutral-50 transition-colors duration-300  hover:bg-neutral-400 hover:text-neutral-700 dark:bg-neutral-200  dark:text-neutral-700 dark:hover:bg-neutral-400 dark:hover:text-white"
+          className="mt-8 w-[50%] self-center rounded-md bg-neutral-600 p-2 text-neutral-50 shadow-lg transition-colors duration-300  hover:bg-neutral-400 hover:text-neutral-700 dark:bg-neutral-200  dark:text-neutral-700 dark:hover:bg-neutral-400 dark:hover:text-white"
         >
           Send
         </button>

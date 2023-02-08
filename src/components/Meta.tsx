@@ -20,7 +20,8 @@ export const Meta = ({ title, keywords, description }: Props) => {
 };
 
 Meta.defaultProps = {
-  title: "Portfolio",
-  keywords: "david, nwachukwu, programming, coding, portfolio, davidncodes",
+  title: "David Nwachukwu",
+  keywords:
+    "david, nwachukwu, programming, coding, portfolio, davidncodes, davidncodes.com",
   description: "David Nwachukwu Portfolio",
 };
