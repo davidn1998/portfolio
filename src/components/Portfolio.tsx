@@ -37,6 +37,12 @@ export const Portfolio = (props: Props) => {
           projectURL="https://github.com"
           projectCleanURL="github.com/example"
         />
+        <ProjectCard
+          projectName="Example"
+          projectDesc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, hic. Dignissimos non aut aliquid animi!"
+          projectURL="https://github.com"
+          projectCleanURL="github.com/example"
+        />
       </div>
     </div>
   );

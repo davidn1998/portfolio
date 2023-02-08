@@ -26,12 +26,12 @@ export const ContactForm = (props: Props) => {
       .then((res) => {
         console.log(res.data);
         toast.success("Message Sent 🚀", {
-          position: "bottom-center",
+          position: "top-center",
         });
       })
       .catch((err) => {
         toast.error(`Failed to send message. ${err}`, {
-          position: "bottom-center",
+          position: "top-center",
         });
       });
   };
@@ -59,7 +59,7 @@ export const ContactForm = (props: Props) => {
           {...register("name", {
             required: { value: true, message: "Name is required" },
           })}
-          className="rounded-md bg-gray-300 p-2 dark:bg-gray-700"
+          className="rounded-md bg-neutral-300 p-2 dark:bg-neutral-700"
         />
         {errors.name && (
           <p className="mt-2 text-red-400">{errors?.name?.message}</p>
@@ -70,7 +70,7 @@ export const ContactForm = (props: Props) => {
           {...register("email", {
             required: { value: true, message: "Email is required" },
           })}
-          className="mt-6 rounded-md bg-gray-300 p-2 dark:bg-gray-700"
+          className="mt-6 rounded-md bg-neutral-300 p-2 dark:bg-neutral-700"
         />
         {errors.email && (
           <p className="mt-2 text-red-400">{errors?.email?.message}</p>
@@ -81,7 +81,7 @@ export const ContactForm = (props: Props) => {
             required: { value: true, message: "Message is required" },
           })}
           rows={4}
-          className="mt-6 rounded-md bg-gray-300 p-2 dark:bg-gray-700"
+          className="mt-6 rounded-md bg-neutral-300 p-2 dark:bg-neutral-700"
         />
         {errors.message && (
           <p className="mt-2 text-red-400">{errors?.message?.message}</p>
@@ -89,7 +89,7 @@ export const ContactForm = (props: Props) => {
 
         <button
           type="submit"
-          className="mt-8 w-[50%] rounded-md bg-gray-600 p-2 text-gray-50 transition-colors duration-300  hover:bg-gray-400 hover:text-gray-700 dark:bg-gray-200  dark:text-gray-700 dark:hover:bg-gray-400 dark:hover:text-white"
+          className="mt-8 w-[50%] self-center rounded-md bg-neutral-600 p-2 text-neutral-50 transition-colors duration-300  hover:bg-neutral-400 hover:text-neutral-700 dark:bg-neutral-200  dark:text-neutral-700 dark:hover:bg-neutral-400 dark:hover:text-white"
         >
           Send
         </button>

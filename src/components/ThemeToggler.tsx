@@ -17,7 +17,7 @@ export const ThemeToggler = () => {
       onClick={() => {
         setTheme(theme === "dark" ? "light" : "dark");
       }}
-      className="m-4 cursor-pointer rounded-xl border-2 border-transparent bg-gray-200 p-2 text-lg transition-all duration-100 ease-linear hover:border-gray-400 dark:bg-gray-700"
+      className="z-50 m-4 cursor-pointer rounded-xl border-2 border-transparent bg-neutral-300 p-2 text-lg transition-all duration-100 ease-linear hover:border-neutral-400 dark:bg-neutral-600 dark:text-white"
     >
       {theme === "dark" ? <BsSunFill /> : <BsMoonFill />}
     </button>
