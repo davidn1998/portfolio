@@ -2,10 +2,13 @@ import { Meta } from "@/components/Meta";
 import { Portfolio } from "@/components/Portfolio";
 import { Skills } from "@/components/Skills";
 import appDevAnim from "@/lotties/app-dev.json";
+import { Yellowtail } from "@next/font/google";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { useState } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+
+const yellowtail = Yellowtail({ weight: "400", subsets: ["latin"] });
 
 const tabItems: { [tabs: string]: { x: number; y: number; w: string } } = {
   portfolio: {
@@ -41,7 +44,9 @@ const Home = () => {
         className="mb-14 flex flex-col items-center md:flex-row"
       >
         <div className="mr-4 flex flex-col items-center justify-center text-center md:items-start md:text-start">
-          <h1 className="mb-4 text-2xl font-bold">David Nwachukwu</h1>
+          <h1 className={`mb-4 text-4xl font-bold ${yellowtail.className}`}>
+            David Nwachukwu
+          </h1>
           <p>
             Hi ✌🏾, I&apos;m a{" "}
             <span className="font-bold text-purple-400">full stack</span>{" "}
@@ -83,7 +88,7 @@ const Home = () => {
       </section>
       <div className="mb-6 flex border-b-2 border-gray-500 pb-2 text-lg font-bold dark:border-gray-50">
         <motion.div
-          className="absolute z-[-1] h-[44px] rounded-xl bg-gray-200 dark:bg-gray-700"
+          className="absolute z-[-1] h-[44px] rounded-xl bg-gray-200 dark:bg-neutral-700"
           initial={{ opacity: 0, x: tabItems[tab].x }}
           animate={{
             opacity: 1,
