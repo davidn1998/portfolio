@@ -53,7 +53,7 @@ export const ContactForm = (props: Props) => {
         onSubmit={handleSubmit(onSubmit)}
         data-netlify="true"
         data-netfliy-recaptcha="true"
-        className="mt-32 flex flex-col rounded-2xl bg-gray-50 p-12 text-center text-black shadow-lg dark:bg-neutral-800 dark:text-white dark:shadow-neutral-800"
+        className="flex flex-col rounded-2xl bg-gray-50 p-12 text-center text-black shadow-lg dark:bg-neutral-800 dark:text-white dark:shadow-neutral-800 md:mt-32"
       >
         <h1 className="mb-8 text-2xl font-bold">Contact Me</h1>
         <input
