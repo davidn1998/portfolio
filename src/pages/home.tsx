@@ -12,12 +12,12 @@ const tabItems: { [tabs: string]: { x: number; y: number; w: string } } = {
   portfolio: {
     x: 0,
     y: 0,
-    w: "90px",
+    w: "87px",
   },
   skills: {
-    x: 122,
+    x: 118,
     y: 0,
-    w: "63px",
+    w: "60px",
   },
 };
 
