@@ -1,7 +1,7 @@
 import { Meta } from "@/components/Meta";
 import { Portfolio } from "@/components/Portfolio";
 import { Skills } from "@/components/Skills";
-import { yellowtail } from "@/fonts/yellowtail";
+import { yellowtail } from "@/fonts";
 import appDevAnim from "@/lotties/app-dev.json";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
@@ -42,7 +42,9 @@ const Home = () => {
         className="mb-14 flex flex-col items-center md:flex-row"
       >
         <div className="mr-4 flex flex-col items-center justify-center text-center md:items-start md:text-start">
-          <h1 className={`mb-4 text-4xl font-bold ${yellowtail.className}`}>
+          <h1
+            className={`mb-4 text-4xl font-bold ${yellowtail.variable} font-yellowtail`}
+          >
             David Nwachukwu
           </h1>
           <p>

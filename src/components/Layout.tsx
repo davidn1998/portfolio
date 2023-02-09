@@ -1,3 +1,4 @@
+import { sourceSansPro } from "@/fonts";
 import { AnimatePresence, motion } from "framer-motion";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
@@ -29,7 +30,9 @@ export const Layout = ({ children }: Props) => {
     },
   };
   return (
-    <div className="flex min-h-screen flex-col">
+    <div
+      className={`flex min-h-screen flex-col ${sourceSansPro.variable} font-sans`}
+    >
       <Meta />
       <NavBar />
       <AnimatePresence mode="wait" initial={false}>

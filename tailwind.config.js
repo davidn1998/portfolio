@@ -1,9 +1,16 @@
+const { fontFamily } = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-source-sans-pro)", ...fontFamily.sans],
+        yellowtail: ["var(--font-yellowtail)", ...fontFamily.serif],
+        mono: ["var(--font-jetbrains-mono)", ...fontFamily.mono],
+      },
       keyframes: {
         "slide-in-right": {
           "0%": { transform: "translateX(-400px)" },

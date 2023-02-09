@@ -1,6 +1,5 @@
 import { Meta } from "@/components/Meta";
-import { jetbrainsMono } from "@/fonts/jetbrainsMono";
-import { yellowtail } from "@/fonts/yellowtail";
+import { jetbrainsMono, yellowtail } from "@/fonts";
 import workingDevAnim from "@/lotties/working-dev.json";
 import Lottie from "lottie-react";
 import Link from "next/link";
@@ -38,11 +37,13 @@ const SplashScreen = () => {
       <div className="flex w-full flex-col-reverse items-center justify-between rounded-2xl bg-gray-50 shadow-lg dark:bg-neutral-800 dark:shadow-neutral-800 md:flex-row">
         <Lottie animationData={workingDevAnim} />
         <div className="w-full p-10 text-xl font-bold md:w-[50%] md:p-16 md:text-2xl">
-          <h1 className={`mb-4 text-4xl ${yellowtail.className}`}>
+          <h1
+            className={`mb-4 text-4xl ${yellowtail.variable} font-yellowtail`}
+          >
             {" "}
             David Nwachukwu
           </h1>
-          <div className={`${jetbrainsMono.className}`}>
+          <div className={`${jetbrainsMono.variable} font-mono`}>
             <span>&gt; I 💜</span> <span id="typeView"></span>
           </div>
         </div>
