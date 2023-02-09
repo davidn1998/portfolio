@@ -20,19 +20,33 @@ export const ContactForm = (props: Props) => {
     formState: { errors, isSubmitSuccessful },
   } = useForm<ContactData>();
 
+  // Transform form data to a format netlify can read
+  const encode = (data: ContactData) => {
+    return Object.keys(data)
+      .map(
+        (key) =>
+          `${encodeURIComponent(key)} = ${encodeURIComponent(
+            data[key as keyof ContactData]
+          )}`
+      )
+      .join("&");
+  };
+
   const onSubmit: SubmitHandler<ContactData> = (data: ContactData) => {
     axios
-      .post("/contact", data)
+      .post("/contact", { "form-name": "contact-form", ...data })
       .then((res) => {
-        console.log(res.data);
         toast.success("Message Sent 🚀", {
           position: "top-center",
         });
       })
       .catch((err) => {
-        toast.error(`Failed to send message. ${err}`, {
-          position: "top-center",
-        });
+        toast.error(
+          `Sorry 🤕 An error occurred and the message could not be sent. Please try again`,
+          {
+            position: "top-center",
+          }
+        );
       });
   };
 
@@ -56,6 +70,7 @@ export const ContactForm = (props: Props) => {
         className="flex flex-col rounded-2xl bg-gray-50 p-12 text-center text-black shadow-lg dark:bg-neutral-800 dark:text-white dark:shadow-neutral-800 md:mt-32"
       >
         <h1 className="mb-8 text-2xl font-bold">Contact Me</h1>
+        <input type="hidden" name="form-name" value="contact-form" />
         <input
           placeholder="Name"
           {...register("name", {
