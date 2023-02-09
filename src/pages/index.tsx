@@ -52,9 +52,9 @@ const SplashScreen = () => {
       <div className="group mt-16 flex h-24 w-24 items-center justify-center">
         <Link
           href="/home"
-          className="flex h-12 w-12 animate-bounce-vertical items-center justify-center rounded-full bg-purple-400 text-center text-black shadow-md shadow-purple-400 dark:text-white"
+          className="flex h-16 w-24 animate-bounce-vertical items-center justify-center rounded-3xl bg-purple-400 text-center font-bold text-black shadow-md shadow-purple-400 dark:text-white"
         >
-          &uarr;
+          Enter
         </Link>
       </div>
     </div>
