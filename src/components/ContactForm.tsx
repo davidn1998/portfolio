@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosRequestConfig } from "axios";
 import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
@@ -12,6 +12,10 @@ type ContactData = {
   message: string;
 };
 
+interface EncodeData extends ContactData {
+  "form-name": string;
+}
+
 export const ContactForm = (props: Props) => {
   const {
     register,
@@ -21,26 +25,32 @@ export const ContactForm = (props: Props) => {
   } = useForm<ContactData>();
 
   // Transform form data to a format netlify can read
-  const encode = (data: ContactData) => {
+  const encode = (data: EncodeData) => {
     return Object.keys(data)
       .map(
         (key) =>
-          `${encodeURIComponent(key)} = ${encodeURIComponent(
+          `${encodeURIComponent(key)}=${encodeURIComponent(
             data[key as keyof ContactData]
           )}`
       )
       .join("&");
   };
 
+  const reqConfig: AxiosRequestConfig<string> = {
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+  };
+
   const onSubmit: SubmitHandler<ContactData> = (data: ContactData) => {
     axios
-      .post("/contact", { "form-name": "contact-form", ...data })
-      .then((res) => {
+      .post("/contact", encode({ "form-name": "contact", ...data }), reqConfig)
+      .then(() => {
         toast.success("Message Sent 🚀", {
           position: "top-center",
         });
       })
-      .catch((err) => {
+      .catch(() => {
         toast.error(
           `Sorry 🤕 An error occurred and the message could not be sent. Please try again`,
           {
@@ -64,13 +74,14 @@ export const ContactForm = (props: Props) => {
     <>
       <ToastContainer />
       <form
+        name="contact"
         onSubmit={handleSubmit(onSubmit)}
         data-netlify="true"
         data-netfliy-recaptcha="true"
         className="flex flex-col rounded-2xl bg-gray-50 p-12 text-center text-black shadow-lg dark:bg-neutral-800 dark:text-white dark:shadow-neutral-800 md:mt-32"
       >
         <h1 className="mb-8 text-2xl font-bold">Contact Me</h1>
-        <input type="hidden" name="form-name" value="contact-form" />
+        <input type="hidden" name="form-name" value="contact" />
         <input
           placeholder="Name"
           {...register("name", {
