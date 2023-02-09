@@ -39,14 +39,12 @@ const SplashScreen = () => {
       <Meta title="David Nwachukwu" />
       <div className="flex w-full flex-col-reverse items-center justify-between rounded-2xl bg-gray-50 shadow-lg dark:bg-neutral-800 dark:shadow-neutral-800 md:flex-row">
         <Lottie animationData={workingDevAnim} />
-        <div
-          className={`w-full p-10 text-xl font-bold md:w-[50%] md:p-16 md:text-2xl ${jetbrainsMono.className}`}
-        >
+        <div className="w-full p-10 text-xl font-bold md:w-[50%] md:p-16 md:text-2xl">
           <h1 className={`mb-4 text-4xl ${yellowtail.className}`}>
             {" "}
             David Nwachukwu
           </h1>
-          <div>
+          <div className={`${jetbrainsMono.className}`}>
             <span>&gt; I 💜</span> <span id="typeView"></span>
           </div>
         </div>
