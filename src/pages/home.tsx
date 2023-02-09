@@ -1,14 +1,12 @@
 import { Meta } from "@/components/Meta";
 import { Portfolio } from "@/components/Portfolio";
 import { Skills } from "@/components/Skills";
+import { yellowtail } from "@/fonts/yellowtail";
 import appDevAnim from "@/lotties/app-dev.json";
-import { Yellowtail } from "@next/font/google";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import { useState } from "react";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-
-const yellowtail = Yellowtail({ weight: "400", subsets: ["latin"] });
 
 const tabItems: { [tabs: string]: { x: number; y: number; w: string } } = {
   portfolio: {

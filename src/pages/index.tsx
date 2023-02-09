@@ -1,13 +1,11 @@
 import { Meta } from "@/components/Meta";
+import { jetbrainsMono } from "@/fonts/jetbrainsMono";
+import { yellowtail } from "@/fonts/yellowtail";
 import workingDevAnim from "@/lotties/working-dev.json";
-import { JetBrains_Mono, Yellowtail } from "@next/font/google";
 import Lottie from "lottie-react";
 import Link from "next/link";
 import { useEffect } from "react";
 import Typed from "typed.js";
-
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
-const yellowtail = Yellowtail({ weight: "400", subsets: ["latin"] });
 
 const SplashScreen = () => {
   useEffect(() => {
