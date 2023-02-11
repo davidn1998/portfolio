@@ -15,7 +15,7 @@ export const NavBar = ({}) => {
   const { asPath } = useRouter();
 
   return (
-    <nav className="bg-primary flex h-12 items-center justify-between p-2.5 pt-8 dark:text-gray-300">
+    <nav className="flex h-12 items-center justify-between p-2.5 pt-8 dark:text-gray-300">
       {asPath === "/" ? (
         <div></div>
       ) : (
