@@ -11,6 +11,7 @@ export const NavBar = ({}) => {
   const navLinks: NavLink[] = [
     { label: "home", path: "/home" },
     { label: "contact", path: "/contact" },
+    { label: "resume", path: "/CV.pdf" },
   ];
   const { asPath } = useRouter();
 

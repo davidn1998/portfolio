@@ -30,7 +30,11 @@ export const NavLink = ({ label, path }: Props) => {
       <span
         className={linkDecoration({ active: router.asPath === path })}
       ></span>
-      <Link href={path} scroll={false}>
+      <Link
+        href={path}
+        scroll={false}
+        target={label === "resume" ? "_blank" : "_self"}
+      >
         {label}
       </Link>
     </li>
