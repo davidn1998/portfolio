@@ -10,40 +10,14 @@ export const Portfolio = (props: Props) => {
       </p>
       <div className="grid w-full gap-8 md:grid-cols-2 lg:grid-cols-3">
         <ProjectCard
-          projectName="Example"
-          projectDesc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, hic. Dignissimos non aut aliquid animi!"
-          projectURL="https://github.com"
-          projectCleanURL="github.com/example"
-        />
-        <ProjectCard
-          projectName="Example"
-          projectDesc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, hic. Dignissimos non aut aliquid animi!"
-          projectURL="https://github.com"
-          projectCleanURL="github.com/example"
-        />
-        <ProjectCard
-          projectName="Example"
-          projectDesc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, hic. Dignissimos non aut aliquid animi!"
-          projectURL="https://github.com"
-          projectCleanURL="github.com/example"
-        />
-        <ProjectCard
-          projectName="Example"
-          projectDesc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, hic. Dignissimos non aut aliquid animi!"
-          projectURL="https://github.com"
-          projectCleanURL="github.com/example"
-        />
-        <ProjectCard
-          projectName="Example"
-          projectDesc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, hic. Dignissimos non aut aliquid animi!"
-          projectURL="https://github.com"
-          projectCleanURL="github.com/example"
-        />
-        <ProjectCard
-          projectName="Example"
-          projectDesc="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores, hic. Dignissimos non aut aliquid animi!"
-          projectURL="https://github.com"
-          projectCleanURL="github.com/example"
+          name="Charcutify"
+          description="A web app built with Next.js for creating
+          and visualizing custom charcuterie
+          boards. Also presents visualizations and
+          recipes for premade boards."
+          url="https://github.com/davidn1998"
+          cleanURL="github.com/davidn1998/charcutify"
+          imgURL="/project_thumbnails/charcutify_thumb.png"
         />
       </div>
     </div>
