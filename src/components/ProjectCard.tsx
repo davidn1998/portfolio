@@ -37,6 +37,8 @@ export const ProjectCard = ({
           src={imgURL}
           alt="project"
           fill
+          sizes="(max-width: 1024px) 100vw,
+              70vw"
           className="object-cover opacity-10 shadow-xl grayscale filter transition-all duration-300 lg:opacity-100 lg:hover:filter-none"
         />
       </a>
