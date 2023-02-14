@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
+import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 type Props = {
   name: string;
@@ -18,6 +19,12 @@ export const ProjectCard = ({
   cleanURL,
   imgURL,
 }: Props) => {
+  const techIcons = [
+    { name: "Next.js", icon: <SiNextdotjs /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+    { name: "TypeScript", icon: <SiTypescript /> },
+  ];
+
   return (
     <div className="relative mb-20 mt-10 flex">
       <a
@@ -30,16 +37,29 @@ export const ProjectCard = ({
           src={imgURL}
           alt="project"
           fill
-          // width={1657}
-          // height={1017}
           className="object-cover opacity-10 shadow-xl grayscale filter transition-all duration-300 lg:opacity-100 lg:hover:filter-none"
         />
       </a>
-      <div className="absolute right-0 flex flex-col self-center p-8 lg:w-1/2 lg:p-0 lg:text-right">
+      <div className="absolute right-0 flex h-full flex-col justify-center p-8 lg:w-1/2 lg:p-0 lg:text-right">
         <h3 className="text-xl font-bold">{name}</h3>
-        <p className="my-8 text-neutral-900 shadow-2xl dark:text-neutral-300 lg:bg-purple-800 lg:p-8 lg:text-white">
-          {description}
-        </p>
+        <div className="my-8 text-neutral-900 shadow-none dark:text-neutral-300 lg:bg-purple-800 lg:p-8 lg:text-white lg:shadow-2xl">
+          <p className="mb-8">{description}</p>
+          <ul className="flex text-2xl lg:justify-end">
+            {techIcons.map((icon, i) => (
+              <li
+                key={i}
+                className={`group relative ${
+                  i === 0 ? "ml-0" : "ml-8"
+                } cursor-pointer`}
+              >
+                {icon.icon}
+                <span className="absolute left-1/2 top-8 w-auto min-w-max origin-top -translate-x-1/2 scale-0 rounded-md bg-gray-900 p-2 text-xs font-bold text-white shadow-md transition-all duration-300 group-hover:scale-100">
+                  {icon.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className="flex items-center lg:self-end">
           <a href={githubURL} target="_blank" rel="noreferrer">
             <FiGithub className="text-xl transition-all hover:text-purple-800 dark:hover:text-purple-400" />
