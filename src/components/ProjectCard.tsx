@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { FiGithub } from "react-icons/fi";
-import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
 
 type Props = {
   name: string;
@@ -9,6 +8,11 @@ type Props = {
   websiteURL: string;
   cleanURL: string;
   imgURL: string;
+  techIcons: {
+    name: string;
+    icon: JSX.Element;
+  }[];
+  reversed?: boolean;
 };
 
 export const ProjectCard = ({
@@ -18,17 +22,17 @@ export const ProjectCard = ({
   websiteURL,
   cleanURL,
   imgURL,
+  techIcons,
+  reversed,
 }: Props) => {
-  const techIcons = [
-    { name: "Next.js", icon: <SiNextdotjs /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss /> },
-    { name: "TypeScript", icon: <SiTypescript /> },
-  ];
-
   return (
-    <div className="relative mb-20 mt-10 flex">
+    <div
+      className={`${
+        reversed ? "flex-row-reverse" : "flex-row"
+      } relative mb-20 mt-10 flex`}
+    >
       <a
-        href={githubURL}
+        href={websiteURL}
         target="_blank"
         rel="noreferrer"
         className="relative min-h-[400px] w-full lg:w-2/3"
@@ -42,11 +46,19 @@ export const ProjectCard = ({
           className="object-cover opacity-10 shadow-xl grayscale filter transition-all duration-300 lg:opacity-100 lg:hover:filter-none"
         />
       </a>
-      <div className="absolute right-0 flex h-full flex-col justify-center p-8 lg:w-1/2 lg:p-0 lg:text-right">
+      <div
+        className={`${
+          reversed ? "left-0 lg:text-left" : "right-0 lg:text-right"
+        } absolute flex h-full flex-col justify-center p-8 lg:w-1/2 lg:p-0`}
+      >
         <h3 className="text-xl font-bold">{name}</h3>
         <div className="my-8 text-neutral-900 shadow-none dark:text-neutral-300 lg:bg-purple-800 lg:p-8 lg:text-white lg:shadow-2xl">
           <p className="mb-8">{description}</p>
-          <ul className="flex text-2xl lg:justify-end">
+          <ul
+            className={`${
+              reversed ? "lg:justify-start" : "lg:justify-end"
+            } flex text-2xl`}
+          >
             {techIcons.map((icon, i) => (
               <li
                 key={i}
@@ -62,7 +74,11 @@ export const ProjectCard = ({
             ))}
           </ul>
         </div>
-        <div className="flex items-center lg:self-end">
+        <div
+          className={`${
+            reversed ? "lg:justify-start" : "lg:justify-end"
+          } flex items-center`}
+        >
           <a href={githubURL} target="_blank" rel="noreferrer">
             <FiGithub className="text-xl transition-all hover:text-purple-800 dark:hover:text-purple-400" />
           </a>
