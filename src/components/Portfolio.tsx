@@ -1,5 +1,6 @@
 import {
   SiFirebase,
+  SiFramer,
   SiMongodb,
   SiNetlify,
   SiNextdotjs,
@@ -20,6 +21,21 @@ export const Portfolio = (props: Props) => {
       </p>
       <div className="flex flex-col">
         <ProjectCard
+          name="Filmdek"
+          description="A web app built with Next.js for generating and collecting movie trading cards. Incorporating a retro design inspired by 90's CRT televisions, experience the nostalgia of long beloved movies in this TCG for film lovers!"
+          githubURL="https://github.com/davidn1998/filmdek"
+          websiteURL="https://filmdek.com/"
+          cleanURL="filmdek.com"
+          imgURL="/project_thumbnails/filmdek_thumb.png"
+          techIcons={[
+            { name: "Next.js", icon: <SiNextdotjs /> },
+            { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+            { name: "TypeScript", icon: <SiTypescript /> },
+            { name: "Framer Motion", icon: <SiFramer /> },
+            { name: "Netlify", icon: <SiNetlify /> },
+          ]}
+        />
+        <ProjectCard
           name="Charcutify"
           description="A web app built with Next.js for creating, customising and visualising custom charcuterie boards. You can also browse premade boards."
           githubURL="https://github.com/davidn1998/charcutify"
@@ -32,10 +48,11 @@ export const Portfolio = (props: Props) => {
             { name: "TypeScript", icon: <SiTypescript /> },
             { name: "Netlify", icon: <SiNetlify /> },
           ]}
+          reversed
         />
         <ProjectCard
           name="Ludumlib"
-          description="A web app built with Next.js on the frontend, Node.js and Express.js for the backend with a MongoDB database. Authentication was built with Firebase. Allows people to discover video games, track the games they have played, view their gaming habits through a personal analytics dashboard and more."
+          description="A web app that allows people to discover video games, track the games they have played, view their gaming habits through a personal analytics dashboard and more. Built with Next.js on the frontend, Node.js and Express.js for the backend with a MongoDB database. Authentication was built with Firebase. "
           githubURL="https://github.com/davidn1998/ludumlib"
           websiteURL="https://ludumlib.vercel.app/"
           cleanURL="ludumlib.vercel.app"
@@ -47,7 +64,6 @@ export const Portfolio = (props: Props) => {
             { name: "Firebase", icon: <SiFirebase /> },
             { name: "Vercel", icon: <SiVercel /> },
           ]}
-          reversed
         />
       </div>
     </div>
