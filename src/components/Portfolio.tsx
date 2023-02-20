@@ -1,3 +1,4 @@
+import { AiFillApi } from "react-icons/ai";
 import {
   SiFirebase,
   SiFramer,
@@ -33,6 +34,7 @@ export const Portfolio = (props: Props) => {
             { name: "TypeScript", icon: <SiTypescript /> },
             { name: "Framer Motion", icon: <SiFramer /> },
             { name: "Netlify", icon: <SiNetlify /> },
+            { name: "TMDB API", icon: <AiFillApi /> },
           ]}
         />
         <ProjectCard
@@ -52,7 +54,7 @@ export const Portfolio = (props: Props) => {
         />
         <ProjectCard
           name="Ludumlib"
-          description="A web app that allows people to discover video games, track the games they have played, view their gaming habits through a personal analytics dashboard and more. Built with Next.js on the frontend, Node.js and Express.js for the backend with a MongoDB database. Authentication was built with Firebase. "
+          description="A web app that allows people to discover video games, track the games they have played, view their gaming habits through a personal analytics dashboard and more. Built with Next.js on the frontend, Node.js and Express.js for the backend with a MongoDB database. Authentication was built with Firebase."
           githubURL="https://github.com/davidn1998/ludumlib"
           websiteURL="https://ludumlib.vercel.app/"
           cleanURL="ludumlib.vercel.app"
@@ -63,6 +65,7 @@ export const Portfolio = (props: Props) => {
             { name: "MongoDB", icon: <SiMongodb /> },
             { name: "Firebase", icon: <SiFirebase /> },
             { name: "Vercel", icon: <SiVercel /> },
+            { name: "RAWG API", icon: <AiFillApi /> },
           ]}
         />
       </div>
